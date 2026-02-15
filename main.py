@@ -40,10 +40,10 @@ def main():
 
     # Dataset & Loader
     dataset = HorseZebraDataset(
-        root_horse=config.TRAIN_DIR + "A", 
-        root_zebra=config.TRAIN_DIR + "B", 
-        transform=None # We will add transforms in the next polishing step
-    )
+    root_horse=config.TRAIN_DIR + "A", 
+    root_zebra=config.TRAIN_DIR + "B", 
+    transform=config.transforms # Now using our new transforms
+)
     loader = DataLoader(
         dataset,
         batch_size=config.BATCH_SIZE,
